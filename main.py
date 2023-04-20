@@ -360,6 +360,4 @@ def run_flask():
 
 
 if __name__ == '__main__':
-    thread = threading.Thread(target=run_flask)
-    thread.start()
-    #app.run(debug=True)
+    run_flask()

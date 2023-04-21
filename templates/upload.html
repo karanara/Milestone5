@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Visualization</title>
+</head>
+<body>
+	<form method="post" enctype="multipart/form-data" action="/upload">
+		<!--<label for="file">Choose an Excel file to upload:</label><br>
+		<input type="file" id="file" name="file"><br><br>-->
+
+		<label for="dataset">Select the dataset name</label><br>
+		<select id="dataset" name="dataset">
+			<option value="zoom">Zoom_Data</option>
+			<option value="webex">Webex_Data</option>
+		</select><br><br>
+
+		<label for="dropdown1">Which data you need old or new:</label><br>
+		<select id="dropdown1" name="dropdown1">
+			<option value="old">Old Data</option>
+			<option value="new">New Data</option>
+		</select><br><br>
+
+		<label for="dropdown2">What Kind of Insight you want to :</label><br>
+		<select id="dropdown2" name="dropdown2">
+			<option value="Distribution of Document Word Counts by Dominant Topic">Distribution of Document Word Counts by Dominant Topic</option>
+			<option value="Word Clouds of Top N Keywords in Each Topic">Word Clouds of Top N Keywords in Each Topic</option>
+			<option value="Word Count and Importance of Topic Keywords">Word Count and Importance of Topic Keywords</option>
+			<option value="Sentence Topic Coloring for Documents">Sentence Topic Coloring for Documents</option>
+			<option value="Number of Documents by Topic Weightage">Number of Documents by Topic Weightage</option>
+		</select><br><br>
+
+		<input type="submit" value="Click here to view the insight">
+	</form>
+    {% if result %}
+      <div style="text-align:center">
+		  <div>
+			 <b>The {{user_param2}} for {{user_param1}} of {{filename}}  dataset is:</b>
+		  </div>
+    <img style="width:50%;height:auto"; src="data:image/png;base64, {{ result }}" />
+      </div>
+    {% endif %}
+</body>
+</html>

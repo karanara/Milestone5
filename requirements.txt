@@ -1,4 +1,5 @@
-﻿blis
+﻿matplotlib
+blis
 catalogue
 certifi
 charset-normalizer
@@ -49,4 +50,3 @@ wasabi
 Werkzeug
 wordcloud
 zipp
-matplotlib

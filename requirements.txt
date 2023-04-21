@@ -49,3 +49,4 @@ wasabi
 Werkzeug
 wordcloud
 zipp
+matplotlib
